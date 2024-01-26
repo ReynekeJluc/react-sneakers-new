@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+// Обнуление
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+folder,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+//
+
+// variables
+:root {
+	--sides_margin: 85px;
+
+	--color_search: #f3f3f3;
+	--color_links: #5c5c5c;
+	--color_bg: #e7f6ff;
+	--color_border: #eaeaea;
+	--color_text: #9d9d9d;
+
+	--sneakers_width: 230px;
+	--sneakers_height: 280px;
+	--sneakers_image_width: 170px;
+}
+//
+
+// Delete default cross in input
+input[type='search' i]::-webkit-search-cancel-button,
+input[type='search' i]:enabled:read-write:-webkit-any(
+		:focus,
+		:hover
+	)::-webkit-search-cancel-button {
+	display: none;
+}
+//
+
+body {
+	background: var(--color_bg);
+	font-family: 'Inter', sans-serif;
+	font-size: 14px;
+}
+
+.wrapper {
+	background: #fff;
+	border-radius: 20px;
+	margin: var(--sides_margin);
+	hr {
+		border: 1px solid var(--color_border);
+		width: 100vw - var(--sides_margin);
+	}
+}

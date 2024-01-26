@@ -1,0 +1,140 @@
+.drawer_wrapper {
+	position: relative;
+	display: flex;
+	.drawer_bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc((100vw / 3) * 2);
+		height: 100vh;
+		background: #000;
+		opacity: 50%;
+		z-index: 10000;
+	}
+	.drawer__block {
+		display: flex;
+		flex-direction: column;
+		padding: 30px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background: #fff;
+		height: 100vh;
+		width: calc(100vw / 3);
+		z-index: 10000;
+		.drawer_empty {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			h4 {
+				margin-top: 20px;
+			}
+			p {
+				line-height: 20px;
+				color: #b3b3b3;
+			}
+			.button__back {
+				cursor: pointer;
+				position: relative;
+				background: #9dd458;
+				color: #fff;
+				margin-top: 30px;
+				padding: 20px 65px;
+				border-radius: 18px;
+				img {
+					position: absolute;
+					top: 21px;
+					left: 25px;
+				}
+			}
+		}
+		.drawer__items {
+			flex-grow: 1;
+			overflow: auto;
+			font-size: 15px;
+		}
+		.drawer__item {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px;
+			margin: 10px 0;
+			border: 1px solid #f3f3f3;
+			border-radius: 20px;
+			.card__info {
+				max-width: 200px;
+				line-height: normal;
+				p {
+					margin-bottom: 5px;
+				}
+			}
+			.card__img {
+				max-width: 100px;
+				max-height: 100px;
+				img {
+					margin-top: -20px;
+				}
+			}
+			.card__cancel {
+				cursor: pointer;
+				width: 40px;
+				height: 40px;
+				margin-right: 20px;
+			}
+		}
+		h4 {
+			font-weight: 600;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		.drawer__info {
+			.drawer__prices {
+				margin-bottom: 25px;
+				.total {
+					align-items: end;
+					font-size: 16px;
+					li {
+						display: flex;
+						justify-content: space-between;
+						align-items: end;
+						margin-top: 30px;
+					}
+					div {
+						flex: 1;
+						border-bottom: 1px dashed #dfdfdf;
+						margin: 0 10px;
+					}
+				}
+			}
+			.order__block {
+				position: relative;
+				.button__order {
+					position: relative;
+					background: #9dd458;
+					width: calc((100vw / 3) - 60px);
+					height: 55px;
+					border-radius: 20px;
+					p {
+						color: #fff;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin-right: -50%;
+						transform: translate(-50%, -50%);
+					}
+				}
+				svg {
+					position: absolute;
+					top: 20px;
+					right: 30px;
+					z-index: 1000;
+				}
+			}
+		}
+	}
+}
