@@ -93,7 +93,6 @@ function App() {
 			<>
 				{isDrawer ? (
 					<Drawer
-						items={cards_drawer}
 						DrawerOpen={() => {
 							setIsDrawer(false);
 							document.body.style.overflow = 'visible';

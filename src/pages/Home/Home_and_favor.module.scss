@@ -1,9 +1,15 @@
 .wrapper__content {
 	padding: 45px 60px 45px 45px;
+	min-height: 100vh;
 	.content {
-		.content__title {
-			display: flex;
+		.content__title_flex {
 			justify-content: space-between;
+		}
+		.content__title {
+			svg {
+				margin-right: 20px;
+			}
+			display: flex;
 			align-items: center;
 			margin-bottom: 40px;
 			h2 {

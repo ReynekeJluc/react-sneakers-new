@@ -1,5 +1,7 @@
+import classNames from 'classnames';
 import React from 'react';
 import { AppContext } from '../../App.jsx';
+
 import Card from '../../components/Card/index.jsx';
 import styles from './Home_and_favor.module.scss';
 
@@ -31,7 +33,12 @@ function Home({ cards_list }) {
 	return (
 		<div className={styles.wrapper__content}>
 			<div className={styles.content}>
-				<div className={styles.content__title}>
+				<div
+					className={classNames(
+						styles.content__title,
+						styles.content__title_flex
+					)}
+				>
 					<h2>
 						{search_input
 							? `Поиск по запросу "${search_input}"`

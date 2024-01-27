@@ -6,9 +6,9 @@ import Convert from '../../utils/converter.jsx';
 import { source_drawer, source_orders } from '../../source/index.jsx';
 import styles from './Drawer.module.scss';
 
-import PlugRightBlock from './PlugRightBlock.jsx';
+import PlugRightBlock from '../EmptyComponent/index.jsx';
 
-function Drawer({ DrawerOpen, OnRemove, items = [] }) {
+function Drawer({ DrawerOpen, OnRemove }) {
 	const { cards_drawer, setCards_drawer } = React.useContext(AppContext);
 	const [isOrdered, setIsOrdered] = React.useState(false);
 
@@ -35,9 +35,9 @@ function Drawer({ DrawerOpen, OnRemove, items = [] }) {
 			<div onClick={DrawerOpen} className={styles.drawer_bg}></div>
 			<div className={styles.drawer__block}>
 				<h4>Корзина</h4>
-				{items.length !== 0 ? (
+				{cards_drawer.length !== 0 ? (
 					<div className={styles.drawer__items}>
-						{items.map(obj => (
+						{cards_drawer.map(obj => (
 							<div className={styles.drawer__item}>
 								<div className={styles.card__img}>
 									<img
@@ -70,6 +70,7 @@ function Drawer({ DrawerOpen, OnRemove, items = [] }) {
 						}
 						imageUrl={isOrdered ? '/img/order.png' : '/img/empty_drawer.png'}
 						DrawerOpen={DrawerOpen}
+						isDrawer={true}
 					/>
 				)}
 				<div className={styles.drawer__info}>
@@ -91,7 +92,7 @@ function Drawer({ DrawerOpen, OnRemove, items = [] }) {
 					)}
 					<div className={styles.order__block}>
 						<button
-							disabled={isOrdered}
+							disabled={isOrdered || cards_drawer.length === 0}
 							onClick={OrderComplete}
 							className={styles.button__order}
 						>

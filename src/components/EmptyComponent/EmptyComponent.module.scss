@@ -1,0 +1,38 @@
+.drawer__items {
+	flex-grow: 1;
+	overflow: auto;
+	font-size: 15px;
+}
+.drawer_empty {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	h4 {
+		font-weight: 600;
+		font-size: 24px;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+	p {
+		line-height: 20px;
+		color: #b3b3b3;
+	}
+	.button__back {
+		cursor: pointer;
+		position: relative;
+		background: #9dd458;
+		color: #fff;
+		margin-top: 30px;
+		padding: 20px 65px;
+		border-radius: 18px;
+		img {
+			margin-right: 15px;
+			vertical-align: middle;
+		}
+	}
+}
