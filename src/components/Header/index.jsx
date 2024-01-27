@@ -2,11 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 
-import { AppContext } from '../../App';
-
 function Header(props) {
-	const { cards_drawer } = React.useContext(AppContext);
-
 	return (
 		<header>
 			<Link to='/'>

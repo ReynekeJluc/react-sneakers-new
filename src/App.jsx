@@ -2,7 +2,8 @@ import axios from 'axios';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import './index.scss';
+import './assets/index.scss';
+import { source_drawer, source_favor, source_main } from './source';
 
 import Drawer from './components/Drawer/index.jsx';
 import Header from './components/Header/index.jsx';
@@ -13,10 +14,6 @@ import Home from './pages/Home/home.jsx';
 export const AppContext = React.createContext({});
 
 function App() {
-	const source_main = 'http://localhost:5175/cards_info';
-	const source_drawer = 'http://localhost:5175/cards_drawer';
-	const source_favor = 'http://localhost:5175/cards_favor';
-
 	const [cards_list, setCards_list] = React.useState([]);
 	const [cards_drawer, setCards_drawer] = React.useState([]);
 	const [cards_favor, setCards_favor] = React.useState([]);
@@ -82,6 +79,7 @@ function App() {
 		<AppContext.Provider
 			value={{
 				cards_drawer,
+				setCards_drawer,
 				cards_favor,
 				OnAddFavor,
 				OnRemoveFavor,
