@@ -4,9 +4,9 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"start": "concurrently \"yarn server\" \"yarn dev\"",
+		"start": "concurrently \"yarn serve\" \"yarn dev\"",
 		"dev": "vite",
-		"server": "json-server -w server/db.json -p 5175",
+		"serve": "json-server -w server/db.json -p 5175",
 		"build": "vite build",
 		"lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview"
@@ -14,7 +14,7 @@
 	"dependencies": {
 		"axios": "^1.6.5",
 		"classnames": "^2.5.1",
-		"json-server": "^1.0.0-alpha.21",
+		"json-server": "^1.0.0-alpha.23",
 		"node-sass": "^9.0.0",
 		"react": "^18.2.0",
 		"react-content-loader": "^6.2.1",
