@@ -10,6 +10,7 @@ import Header from './components/Header/index.jsx';
 import Slider from './components/Slider/index.jsx';
 import Favor from './pages/Home/favor.jsx';
 import Home from './pages/Home/home.jsx';
+import Order from './pages/Home/order.jsx';
 
 export const AppContext = React.createContext({});
 
@@ -116,6 +117,7 @@ function App() {
 							}
 						></Route>
 						<Route path='/favorites' element={<Favor></Favor>}></Route>
+						<Route path='/orders' element={<Order></Order>}></Route>
 					</Routes>
 				</div>
 			</>

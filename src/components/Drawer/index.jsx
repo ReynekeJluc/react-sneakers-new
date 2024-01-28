@@ -12,6 +12,9 @@ function Drawer({ DrawerOpen, OnRemove }) {
 	const { cards_drawer, setCards_drawer } = React.useContext(AppContext);
 	const [isOrdered, setIsOrdered] = React.useState(false);
 
+	const totalPrice = cards_drawer.reduce((sum, obj) => obj.price + sum, 0);
+	const deliveryPrice = Math.ceil(totalPrice * 0.05);
+
 	const OrderComplete = async () => {
 		try {
 			await axios.post(source_orders, {
@@ -80,12 +83,12 @@ function Drawer({ DrawerOpen, OnRemove }) {
 								<li>
 									<span>Итого:</span>
 									<div></div>
-									<b>{Convert('RUB', 0, 3000)}</b>
+									<b>{Convert('RUB', 0, totalPrice + deliveryPrice)}</b>
 								</li>
 								<li>
-									<span>Налог 5%:</span>
+									<span>Доставка:</span>
 									<div></div>
-									<b>{Convert('RUB', 0, 3000)}</b>
+									<b>{Convert('RUB', 0, deliveryPrice)}</b>
 								</li>
 							</ul>
 						</div>

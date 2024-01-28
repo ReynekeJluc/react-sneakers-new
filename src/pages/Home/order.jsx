@@ -1,14 +1,23 @@
+import axios from 'axios';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Card from '../../components/Card/index.jsx';
+import { source_orders } from '../../source/index.jsx';
 import styles from './MainPageStyles.module.scss';
 
-import { AppContext } from '../../App';
 import EmptyComponent from '../../components/EmptyComponent';
 
-function Favor() {
-	const { cards_favor } = React.useContext(AppContext);
+function Order() {
+	const [cards_orders, setCards_orders] = React.useState([]);
+
+	React.useEffect(() => {
+		async function getOrders() {
+			const { data } = await axios.get(source_orders);
+			setCards_orders(data.map(obj => obj.items).flat());
+		}
+		getOrders();
+	}, []);
 
 	return (
 		<div className={styles.wrapper__content}>
@@ -40,11 +49,11 @@ function Favor() {
 							/>
 						</svg>
 					</Link>
-					<h2>Мои закладки</h2>
+					<h2>Мои заказы</h2>
 				</div>
-				{cards_favor.length ? (
+				{cards_orders.length ? (
 					<ul className={styles.list__sneakers}>
-						{cards_favor.map(item => (
+						{cards_orders.map(item => (
 							<Card
 								key={item.id}
 								id={item.id}
@@ -56,10 +65,9 @@ function Favor() {
 					</ul>
 				) : (
 					<EmptyComponent
-						title='У вас нет закладок :('
-						text='Вы ничего не добавляли в закладки'
-						imageUrl='../../../public/img/empty_favor.png'
-						isDrawer={false}
+						title='У вас нет заказов :('
+						text='Вы нищеброд? Оформите хотя бы один заказ.'
+						imageUrl='../../../public/img/empty_order.png'
 					/>
 				)}
 			</div>
@@ -67,4 +75,4 @@ function Favor() {
 	);
 }
 
-export default Favor;
+export default Order;

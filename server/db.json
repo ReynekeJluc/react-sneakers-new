@@ -231,5 +231,23 @@
   ],
   "cards_drawer": [],
   "cards_favor": [],
-  "ordered_goods": []
+  "ordered_goods": [
+    {
+      "id": "08d2",
+      "items": [
+        {
+          "id": "3",
+          "name": "Мужские Кроссовки Nike Blazer Mid Suede",
+          "price": 8499,
+          "imageUrl": "/img/sneakers/3.png"
+        },
+        {
+          "id": "4",
+          "name": "Мужские Кроссовки Under Armour Curry 8",
+          "price": 15199,
+          "imageUrl": "/img/sneakers/5.png"
+        }
+      ]
+    }
+  ]
 }

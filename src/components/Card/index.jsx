@@ -3,6 +3,7 @@ import ContentLoader from 'react-content-loader';
 import styles from './Card.module.scss';
 
 import { AppContext } from '../../App';
+import Convert from '../../utils/converter.jsx';
 
 function Card({ id, name, imageUrl, price }) {
 	const {
@@ -62,13 +63,7 @@ function Card({ id, name, imageUrl, price }) {
 					<div className={styles.block__info}>
 						<div className={styles.block__prices}>
 							<p>Цена:</p>
-							<b>
-								{new Intl.NumberFormat('ru-RU', {
-									style: 'currency',
-									currency: 'RUB',
-									minimumFractionDigits: 0,
-								}).format(price)}
-							</b>
+							<b>{Convert('RUB', 0, price)}</b>
 						</div>
 						<img
 							onClick={OnclickAdd}
