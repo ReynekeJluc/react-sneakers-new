@@ -10,13 +10,13 @@ function PlugRightBlock(props) {
 				<p>{props.text}</p>
 				{props.isDrawer ? (
 					<div onClick={props.DrawerOpen} className={styles.button__back}>
-						<img src='/img/icons/arrow_left.png' alt='arrow_left' />
+						<img src='/img/icons/arrow_left.svg' alt='arrow_left' />
 						Вернуться назад
 					</div>
 				) : (
 					<Link to='/'>
 						<div className={styles.button__back}>
-							<img src='/img/icons/arrow_left.png' alt='arrow_left' />
+							<img src='/img/icons/arrow_left.svg' alt='arrow_left' />
 							Вернуться назад
 						</div>
 					</Link>

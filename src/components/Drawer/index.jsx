@@ -57,7 +57,7 @@ function Drawer({ DrawerOpen, OnRemove }) {
 								<img
 									onClick={() => OnRemove(obj.id)}
 									style={{ cursor: 'pointer' }}
-									src='/img/icons/cancel.png'
+									src='/img/icons/cancel.svg'
 									alt='delete'
 								/>
 							</div>

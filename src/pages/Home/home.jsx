@@ -3,6 +3,7 @@ import React from 'react';
 import { AppContext } from '../../App.jsx';
 
 import Card from '../../components/Card/index.jsx';
+import Slider from '../../components/Slider/index.jsx';
 import styles from './MainPageStyles.module.scss';
 
 function Home({ cards_list }) {
@@ -32,6 +33,7 @@ function Home({ cards_list }) {
 
 	return (
 		<div className={styles.wrapper__content}>
+			<Slider></Slider>
 			<div className={styles.content}>
 				<div
 					className={classNames(

@@ -229,7 +229,14 @@
       "imageUrl": "/img/sneakers/10.png"
     }
   ],
-  "cards_drawer": [],
+  "cards_drawer": [
+    {
+      "id": "4",
+      "name": "Мужские Кроссовки Under Armour Curry 8",
+      "price": 15199,
+      "imageUrl": "/img/sneakers/5.png"
+    }
+  ],
   "cards_favor": [],
   "ordered_goods": [
     {

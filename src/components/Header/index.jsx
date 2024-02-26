@@ -15,7 +15,7 @@ function Header(props) {
 				<div className={styles.logo}>
 					<div className={styles.logo__block}>
 						<img
-							src='img/icons/logo.png'
+							src='img/icons/logo.svg'
 							alt='logotype'
 							width={40}
 							height={40}

@@ -7,7 +7,6 @@ import { source_drawer, source_favor, source_main } from './source';
 
 import Drawer from './components/Drawer/index.jsx';
 import Header from './components/Header/index.jsx';
-import Slider from './components/Slider/index.jsx';
 import Favor from './pages/Home/favor.jsx';
 import Home from './pages/Home/home.jsx';
 import Order from './pages/Home/order.jsx';
@@ -112,9 +111,7 @@ function App() {
 					<Routes>
 						<Route
 							path='/'
-							element={
-								((<Slider></Slider>), (<Home cards_list={cards_list}></Home>))
-							}
+							element={<Home cards_list={cards_list}></Home>}
 						></Route>
 						<Route path='/favorites' element={<Favor></Favor>}></Route>
 						<Route path='/orders' element={<Order></Order>}></Route>
