@@ -3,13 +3,23 @@
 	height: 500px;
 	margin: 0 0 50px 0;
 	.arrows {
-		position: absolute;
-		top: 0;
-		right: 0;
 		button {
 			background: none;
 		}
-		z-index: 100;
+		.left {
+			position: absolute;
+			top: 50%;
+			left: -2%;
+			transform: translateY(-50%);
+			z-index: 100;
+		}
+		.right {
+			position: absolute;
+			top: 50%;
+			right: -2%;
+			transform: translateY(-50%);
+			z-index: 100;
+		}
 	}
 	.list_slide {
 		width: 100%;
@@ -22,7 +32,7 @@
 				url('../../../public/img/slider/slide.png');
 			.text {
 				position: absolute;
-				top: 33%;
+				top: 30%;
 				left: 6.5%;
 				font-size: 52px;
 				font-weight: bold;
@@ -39,7 +49,7 @@
 		}
 		.btn {
 			position: absolute;
-			top: 60%;
+			top: 57%;
 			left: 6.6%;
 			min-height: 65px;
 			min-width: 250px;
@@ -49,8 +59,6 @@
 			font-weight: bold;
 			color: #fff;
 			background: #a5d364;
-			.left {
-			}
 		}
 	}
 }
