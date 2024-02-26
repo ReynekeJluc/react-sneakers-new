@@ -1,6 +1,24 @@
+import axios from 'axios';
+import React from 'react';
+
+import { source_slides } from '../../source';
 import styles from './Slider.module.scss';
 
 function Slider(props) {
+	const [images, setImages] = React.useState([]);
+	const [slide, setSlide] = React.useState(0);
+
+	React.useEffect(() => {
+		async function GetImage() {
+			const data = await axios.get(source_slides);
+			setImages(data.data);
+		}
+
+		setSlide(images.length);
+
+		GetImage();
+	}, []);
+
 	return (
 		<div className={styles.slider}>
 			<div className={styles.arrows}>
