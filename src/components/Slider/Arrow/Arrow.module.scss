@@ -1,0 +1,17 @@
+button {
+	background: none;
+}
+.left {
+	position: absolute;
+	top: 50%;
+	left: -2%;
+	transform: translateY(-50%);
+	z-index: 100;
+}
+.right {
+	position: absolute;
+	top: 50%;
+	right: -2%;
+	transform: translateY(-50%);
+	z-index: 100;
+}
