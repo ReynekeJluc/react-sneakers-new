@@ -61,7 +61,7 @@ function Home({ cards_list }) {
 						{search_input && (
 							<img
 								onClick={() => setSearch_input('')}
-								src='/img/icons/clear.png'
+								src='/img/icons/clear.svg'
 								className={styles.clear__btn}
 								alt='clear'
 							/>
