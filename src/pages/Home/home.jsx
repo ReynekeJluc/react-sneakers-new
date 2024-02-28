@@ -2,9 +2,11 @@ import classNames from 'classnames';
 import React from 'react';
 import { AppContext } from '../../App.jsx';
 
-import Card from '../../components/Card/index.jsx';
-import Slider from '../../components/Slider/index.jsx';
 import styles from './MainPageStyles.module.scss';
+
+import Card from '../../components/Card/index.jsx';
+import Footer from '../../components/Footer/index.jsx';
+import Slider from '../../components/Slider/index.jsx';
 
 function Home({ cards_list }) {
 	const { isLoading } = React.useContext(AppContext);
@@ -70,6 +72,7 @@ function Home({ cards_list }) {
 				</div>
 				<ul className={styles.list__sneakers}>{renderCards()}</ul>
 			</div>
+			<Footer></Footer>
 		</div>
 	);
 }
