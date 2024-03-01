@@ -10,7 +10,6 @@ import Slide from './Slide';
 function Slider(props) {
 	const [images, setImages] = React.useState([]);
 	const [slideId, setSlideId] = React.useState(1);
-	const [isActive, setIsActive] = React.useState(0);
 
 	React.useEffect(() => {
 		async function GetImage() {
@@ -30,12 +29,22 @@ function Slider(props) {
 	return (
 		<div
 			className={styles.slider}
-			//style={!images.length ? { display: 'none' } : null}
+			style={!images.length ? { display: 'none' } : null}
 		>
-			<Arrow fun={Prev} dir={'left'}></Arrow>
-			<Arrow fun={Next} dir={'right'}></Arrow>
+			<Arrow
+				fun={Prev}
+				dir={'left'}
+				style={slideId < 2 ? { display: 'none' } : null}
+			></Arrow>
+			<Arrow
+				fun={Next}
+				dir={'right'}
+				style={slideId > images.length - 1 ? { display: 'none' } : null}
+			></Arrow>
 			<ul className={styles.list_slide}>
-				<Slide id={slideId}></Slide>
+				{images.map((img, index) => (
+					<Slide key={index} img={img.imageUrl} />
+				))}
 			</ul>
 			<div className={styles.dots}></div>
 		</div>

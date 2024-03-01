@@ -40,7 +40,7 @@ function Drawer({ DrawerOpen, OnRemove }) {
 				<h4>Корзина</h4>
 				{cards_drawer.length !== 0 ? (
 					<div className={styles.drawer__items}>
-						{cards_drawer.map(obj => (
+						{cards_drawer.map((obj, index) => (
 							<div className={styles.drawer__item}>
 								<div className={styles.card__img}>
 									<img

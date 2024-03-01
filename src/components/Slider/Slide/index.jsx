@@ -2,14 +2,12 @@ import React from 'react';
 
 import styles from './Slide.module.scss';
 
-function Slide({ id }) {
-	const src = `../../../public/img/slider/${id}.png`;
-
+function Slide({ img }) {
 	return (
 		<li
 			className={styles.slide}
 			style={{
-				background: `no-repeat 100% / 100% url(${src})`,
+				background: `no-repeat 100% / 100% url(${img})`,
 			}}
 		>
 			<div className={styles.text}>

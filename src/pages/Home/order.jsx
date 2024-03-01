@@ -14,7 +14,7 @@ function Order() {
 	React.useEffect(() => {
 		async function getOrders() {
 			const { data } = await axios.get(source_orders);
-			setCards_orders(data.map(obj => obj.items).flat());
+			setCards_orders(data.map((obj, index) => obj.items).flat());
 		}
 		getOrders();
 	}, []);

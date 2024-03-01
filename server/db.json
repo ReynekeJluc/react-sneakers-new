@@ -2,27 +2,27 @@
 	"slides": [
 		{
 			"id": "1",
-			"imageUrl": "/img/slider/1.png"
+			"imageUrl": "../../../public/img/slider/1.png"
 		},
 		{
 			"id": "2",
-			"imageUrl": "/img/slider/2.png"
+			"imageUrl": "../../../public/img/slider/2.png"
 		},
 		{
 			"id": "3",
-			"imageUrl": "/img/slider/3.png"
+			"imageUrl": "../../../public/img/slider/3.png"
 		},
 		{
 			"id": "4",
-			"imageUrl": "/img/slider/4.png"
+			"imageUrl": "../../../public/img/slider/4.png"
 		},
 		{
 			"id": "5",
-			"imageUrl": "/img/slider/5.png"
+			"imageUrl": "../../../public/img/slider/5.png"
 		},
 		{
 			"id": "6",
-			"imageUrl": "/img/slider/6.png"
+			"imageUrl": "../../../public/img/slider/6.png"
 		}
 	],
 	"cards_info": [
