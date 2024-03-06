@@ -8,10 +8,12 @@ import styles from './MainPageStyles.module.scss';
 import Card from '../../components/Card/index.jsx';
 import Footer from '../../components/Footer/index.jsx';
 import Slider from '../../components/Slider/index.jsx';
+import Arrow from './Arrow/index.jsx';
 
 function Home({ cards_list }) {
-	const { isLoading } = React.useContext(AppContext);
+	const { isLoading, images } = React.useContext(AppContext);
 	const [search_input, setSearch_input] = React.useState('');
+	const [curIndex, setCurIndex] = React.useState(0);
 
 	const ChangeInput = e => {
 		setSearch_input(e.target.value);
@@ -36,9 +38,40 @@ function Home({ cards_list }) {
 					));
 	};
 
+	React.useEffect(() => {
+		const lastIndex = images.length - 1;
+		if (curIndex < 0) {
+			setCurIndex(lastIndex);
+		}
+		if (curIndex > lastIndex) {
+			setCurIndex(0);
+		}
+	}, [curIndex, images]);
+
+	React.useEffect(() => {
+		let slider = setInterval(
+			() => setCurrentIndex(prevState => prevState + 1), //! Доделать и функции ниже тоже
+			2000
+		);
+		return () => {
+			clearInterval(slider);
+		};
+	}, [curIndex]);
+
+	function Prev() {
+		setCurIndex(prevState => prevState + 1);
+	}
+	function Next() {
+		setCurIndex(prevState => prevState - 1);
+	}
+
 	return (
 		<div className={styles.wrapper__content}>
-			<Slider></Slider>
+			<div style={{ position: 'relative' }}>
+				<Arrow fun={Prev} dir={'left'}></Arrow>
+				<Slider></Slider>
+				<Arrow fun={Next} dir={'right'}></Arrow>
+			</div>
 			<div className={styles.content}>
 				<div
 					className={classNames(

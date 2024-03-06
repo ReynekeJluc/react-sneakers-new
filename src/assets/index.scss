@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('../assets/COLORS.scss');
 
 // Обнуление
 * {
@@ -73,22 +74,6 @@ h5,
 h6 {
 	font-size: inherit;
 	font-weight: 400;
-}
-//
-
-// variables
-:root {
-	--sides_margin: 85px;
-
-	--color_search: #f3f3f3;
-	--color_links: #5c5c5c;
-	--color_bg: #e7f6ff;
-	--color_border: #eaeaea;
-	--color_text: #9d9d9d;
-
-	--sneakers_width: 230px;
-	--sneakers_height: 280px;
-	--sneakers_image_width: 170px;
 }
 //
 
