@@ -2,6 +2,7 @@
 	"name": "react-sneakers-update",
 	"private": true,
 	"version": "0.0.1",
+	"homepage": "https://reynekejluc.github.io/react-sneakers-new",
 	"type": "module",
 	"scripts": {
 		"start": "concurrently \"yarn serve\" \"yarn dev\"",
